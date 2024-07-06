@@ -22,14 +22,14 @@ function Winner(player,computer)
 {
     if(player == computer)
     {
-        return console.log("The game is draw!");
+        return console.log("\x1b[35m","The Game is Draw!");
     }
     
     if((player == "rock" && computer == "scissors") || (player == "paper" && computer == "rock") || (player == "scissors" && computer == "paper"))
     {
-        return console.log("You Win!");
+        return console.log("\x1b[32m","You Win!");
     }
-    return console.log("You Lost!");
+    return console.log("\x1b[31m","You Lost!");
 }
 
 //logging the moves output
