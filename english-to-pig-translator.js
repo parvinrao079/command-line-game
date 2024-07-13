@@ -12,14 +12,20 @@ function toPigLatin(phrase)
     {
         if(isVowel(word[0]))
         {
+            // This checks if the first character of the word is a vowel.
+            // Add "way" if word starts with a vowel
             return word + "way";
         }
         else if(!isVowel(word[0]) && !isVowel(word[1]))
         {
+            // checks if the first two characters of the word are both consonants.
+            // Move first two consonants to the end and add "ay"
             return word.slice(2) + word.slice(0, 2) + "ay";
         }
         else
         {
+            // checks if the word starts with consonant and followed by a vowel
+            // Move first consonant to the end and add "ay"
             return word.slice(1) + word[0] + "ay";
         }
     }
